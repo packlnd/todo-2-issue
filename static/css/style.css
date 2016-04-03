@@ -1,0 +1,27 @@
+body {
+  background-color: beige;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.main-text-input {
+  width:60%;
+  height:40%;
+}
+
+.main-text-input {
+  font-weight:bold;
+}
+
+.login {
+  height:40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
