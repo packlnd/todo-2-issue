@@ -2,6 +2,7 @@ from flask import Flask, render_template, redirect
 from util import user_logged_in, get_repos
 from flask.ext.github import GitHub
 
+
 app = Flask(__name__)
 github = GitHub(app)
 
