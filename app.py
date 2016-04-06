@@ -5,6 +5,8 @@ from flask.ext.github import GitHub
 
 app = Flask(__name__)
 github = GitHub(app)
+global token
+token = None
 
 @app.route('/')
 def index():
@@ -24,6 +26,12 @@ def results():
 @app.route('/github')
 def github():
     return github.authorize()
+
+@app.route('/callback')
+def callback(api_token):
+    global token
+    token = api_token
+    return redirect('/repositories')
 
 if __name__ == '__main__':
     app.run(debug=True)
