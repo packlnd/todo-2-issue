@@ -4,6 +4,9 @@ from flask.ext.github import GitHub
 
 
 app = Flask(__name__)
+app.config['GITHUB_CLIENT_ID'] = 'XXX'
+app.config['GITHUB_CLIENT_SECRET'] = 'YYY'
+
 github = GitHub(app)
 global token
 token = None
