@@ -1,11 +1,12 @@
 from flask import Flask, render_template, redirect
-from util import user_logged_in, get_repos
+from util import user_logged_in, get_repos, read_config
 from flask.ext.github import GitHub
 
 
 app = Flask(__name__)
-app.config['GITHUB_CLIENT_ID'] = 'XXX'
-app.config['GITHUB_CLIENT_SECRET'] = 'YYY'
+config = read_config()
+app.config['GITHUB_CLIENT_ID'] = config['id']
+app.config['GITHUB_CLIENT_SECRET'] = config['secret']
 
 github = GitHub(app)
 global token
