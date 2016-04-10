@@ -3,3 +3,6 @@ def user_logged_in():
 
 def get_repos():
     return {}
+
+def read_config():
+    return {}
