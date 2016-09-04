@@ -2,13 +2,8 @@
 {% block content %}
 <div class="container">
   <h1>TODOs 2 Issues</h1>
-  <div class="main-text-input">
-    <div class="input-group">
-      <input type="text" class="form-control lg-input">
-      <span class="input-group-btn">
-        <button class="btn btn-success" type="button">Go!</button>
-      </span>
-    </div>
-  </div>
+  {% for repo in data %}
+    <h3>repo.name</h3>
+  {% endfor %}
 </div>
 {% endblock %}
