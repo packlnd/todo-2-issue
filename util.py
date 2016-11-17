@@ -1,6 +1,3 @@
-def user_logged_in():
-    return False
-
 def get_repos(user, repo):
     github.get('repos/%s/' % user)
 

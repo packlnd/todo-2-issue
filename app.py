@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect
-from util import user_logged_in, get_repos, read_config
+from util import get_repos, read_config
 from flask.ext.github import GitHub
 
 
@@ -14,8 +14,6 @@ token = None
 
 @app.route('/')
 def index():
-    if user_logged_in():
-        return redirect('/repositories')
     return render_template('index.html')
 
 @app.route('/issues', methods=['POST'])
