@@ -1,8 +1,6 @@
-def get_repos(user, repo):
-    github.get('repos/%s/' % user)
-
-def get_issues(user, repo):
-    github.get('repos/%s/%s/issues' % (user, repo))
+import json
 
 def read_config():
-    return {}
+    with open('config.json') as f:
+        return json.load(f)
+

@@ -2,8 +2,17 @@
 {% block content %}
 <div class="container">
   <h1>TODOs 2 Issues</h1>
-  {% for repo in data %}
-    <h3>repo.name</h3>
-  {% endfor %}
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+    {% for repo in data %}
+      <tr>
+        <td>{{ repo["name"] }}</td>
+        <td> {{ repo["description"] }} </td>
+      </tr>
+    {% endfor %}
+  </table>
 </div>
 {% endblock %}
