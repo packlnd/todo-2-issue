@@ -29,6 +29,7 @@ def results():
 def github_login():
     return github.authorize()
 
+# TODO: Replace with database
 @github.access_token_getter
 def token_getter():
     return token

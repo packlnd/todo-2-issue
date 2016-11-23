@@ -1,18 +1,12 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="container">
-  <h1>TODOs 2 Issues</h1>
-  <table>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-    </tr>
+  <div class="container">
+    <h1>TODOs 2 Issues</h1>
     {% for repo in data %}
-      <tr>
-        <td>{{ repo["name"] }}</td>
-        <td> {{ repo["description"] }} </td>
-      </tr>
+      <div class="repo">
+        <h4 class="repo-title">{{ repo["name"] }}</h4>
+        <p> {{ repo["description"] }} </p>
+      </div>
     {% endfor %}
-  </table>
-</div>
+  </div>
 {% endblock %}
