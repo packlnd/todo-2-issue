@@ -4,8 +4,13 @@
     <h1>TODOs 2 Issues</h1>
     {% for repo in data %}
       <div class="repo">
-        <h4 class="repo-title">{{ repo["name"] }}</h4>
-        <p> {{ repo["description"] }} </p>
+        <div class="pull-left">
+          <h4 class="repo-title">{{ repo["name"] }}</h4>
+          <p> {{ repo["description"] }} </p>
+        </div>
+        <div class="pull-right">
+          <button id="btn-{{repo['id']}}">List TODOs</button>
+        </div>
       </div>
     {% endfor %}
   </div>
